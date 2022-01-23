@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>AnimeList.Core</RootNamespace>
+  </PropertyGroup>
+
+   <ItemGroup>
+     <PackageReference Include="EPPlus" Version="5.8.5" />
+     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+   </ItemGroup>
+</Project>
