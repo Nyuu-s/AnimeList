@@ -172,3 +172,8 @@ C:\Projects\AnimeList\AnimeList\AnimeList\obj\x86\Debug\FxResources.System.Drawi
 C:\Projects\AnimeList\AnimeList\AnimeList\obj\x86\Debug\FxResources.System.Security.Cryptography.Pkcs.SR.resw
 C:\Projects\AnimeList\AnimeList\AnimeList\obj\x86\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
 C:\Projects\AnimeList\AnimeList\AnimeList\obj\x86\Debug\FxResources.System.Xml.XPath.XmlDocument.SR.resw
+C:\Projects\AnimeList\AnimeList\AnimeList\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\System.IO.FileSystem.AccessControl.dll
+C:\Projects\AnimeList\AnimeList\AnimeList\obj\x86\Debug\FxResources.System.IO.FileSystem.AccessControl.SR.resw
+C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\System.Security.AccessControl.dll
+C:\Projects\AnimeList\AnimeList\AnimeList\obj\x86\Debug\FxResources.System.Security.AccessControl.SR.resw

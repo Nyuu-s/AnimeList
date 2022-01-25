@@ -8,3 +8,5 @@ C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeLis
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.csproj.CoreCompileInputs.cache
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.dll
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.pdb
+C:\Projects\AnimeList\AnimeList\AnimeList.Core\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
+C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.csproj.CopyComplete

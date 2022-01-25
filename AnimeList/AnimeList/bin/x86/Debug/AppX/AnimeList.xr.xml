@@ -151,7 +151,6 @@
       <RootProperty Name="AcceptsReturn" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="IsReadOnly" />
-      <RootEvent Name="TextChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />

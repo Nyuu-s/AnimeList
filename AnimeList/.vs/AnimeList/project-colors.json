@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Fichiers divers",
+      "ColorIndex": -1
+    },
+    "53e8869d-e93e-4bbb-a36d-8dec0682b016": {
+      "ProjectGuid": "53e8869d-e93e-4bbb-a36d-8dec0682b016",
+      "DisplayName": "AnimeList",
+      "ColorIndex": 0
+    },
+    "a980b0bb-aa43-46d5-ac05-94023ea688d4": {
+      "ProjectGuid": "a980b0bb-aa43-46d5-ac05-94023ea688d4",
+      "DisplayName": "AnimeList.Core",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -4,6 +4,7 @@ using Windows.Storage.Pickers;
 using Windows.System;
 using AnimeList.ViewModels;
 using AnimeList.Services;
+using System.IO;
 
 using Windows.UI.Xaml.Controls;
 using AnimeList.Core.Services;
@@ -17,28 +18,56 @@ namespace AnimeList.Views
         public MainPage()
         {
             InitializeComponent();
+            ViewModel.DataLoaded += ProgressBar_loading_data;
+            
         }
 
         
 
         private async void AddFile_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
             picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
             picker.SuggestedStartLocation = PickerLocationId.ComputerFolder;
             picker.FileTypeFilter.Add(".xlsx");
             StorageFile file = await picker.PickSingleFileAsync();
+
             if (file != null)
             {
-                this.AddFile_Textbox.Text = file.Path;
-                ViewModel.loadDataAsynch(file.Path);
+                //did not work, because a FileInfo need to be created but permisson given to StorageFile
+                Windows.Storage.AccessCache.StorageApplicationPermissions.FutureAccessList.Add(file);
+                //temp fix : copy file into app directory for permissions, parse data, delete copied file
+                StorageFile copied;
+
+                //if copied file already exist use it else paste it
+                if (await storageFolder.TryGetItemAsync(file.Name) != null)
+                {
+                    copied = await storageFolder.GetFileAsync(file.Name);
+                }
+                else
+                {
+                    copied = await file.CopyAsync(storageFolder);
+                }
+                    AddFile_Textbox.Text = file.Name;
+                
+                await ViewModel.loadDataAsynch(copied);
+
+                await copied.DeleteAsync();
 
             }
+        }
+
+        private void ProgressBar_loading_data(object sender, int e)
+        {
+            this.DataProgressBar.Value = e;
         }
 
         private void AddFile_Textbox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
+
+
     }
 }

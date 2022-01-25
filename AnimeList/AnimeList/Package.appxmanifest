@@ -5,7 +5,8 @@
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:genTemplate="http://schemas.microsoft.com/appx/developer/windowsTemplateStudio"
-  IgnorableNamespaces="uap mp genTemplate">
+  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
+  IgnorableNamespaces="uap mp genTemplate iot">
 
   <Identity
     Name="666C55FB-A293-49C4-93C2-5F07DBCE1DE4"
@@ -43,13 +44,29 @@
       </uap:VisualElements>
 
       <Extensions>
+
+        <uap:Extension Category="windows.fileOpenPicker">
+
+          <uap:FileOpenPicker>
+
+            <uap:SupportedFileTypes>
+
+              <uap:FileType>.xlsx</uap:FileType>
+
+              <uap:FileType>.txt</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileOpenPicker>
+        </uap:Extension>
       </Extensions>
     </Application>
   </Applications>
 
   <Capabilities>
     <Capability Name="internetClient" />
+    <iot:Capability Name="systemManagement"/>
   </Capabilities>
+
+
 
   <genTemplate:Metadata>
     <genTemplate:Item Name="generator" Value="Template Studio for UWP"/>
