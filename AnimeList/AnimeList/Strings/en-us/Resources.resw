@@ -141,9 +141,9 @@
     <value>Add new animes</value>
     <comment>Page title for MainPage</comment>
   </data>
-  <data name="ShellMenuItem_Views_Main.Text" xml:space="preserve">
-    <value>Main</value>
-    <comment>Menu item text for Main</comment>
+  <data name="ShellMenuItem_File_Add.Text" xml:space="preserve">
+    <value>Add</value>
+    <comment>Menu item text for Add</comment>
   </data>
   <data name="DataTable.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
     <value>Table showing sample sales data</value>
@@ -154,7 +154,7 @@
     <comment>Page title for AnimeGridPage</comment>
   </data>
   <data name="ShellMenuItem_Views_AnimeGrid.Text" xml:space="preserve">
-    <value>AnimeGrid</value>
+    <value>List of Animes</value>
     <comment>Menu item text for AnimeGrid</comment>
   </data>
   <data name="ListDetails_NoSelection.Text" xml:space="preserve">
@@ -172,5 +172,69 @@
   <data name="ShellMenuItem_Views_PreviewNotice.Text" xml:space="preserve">
     <value>PreviewNotice</value>
     <comment>Menu item text for PreviewNotice</comment>
+  </data>
+  <data name="AnimeCover.Header" xml:space="preserve">
+    <value>Cover</value>
+    <comment>cover header</comment>
+  </data>
+  <data name="AnimeDwn.Header" xml:space="preserve">
+    <value>Dwn</value>
+    <comment>dwn header</comment>
+  </data>
+  <data name="AnimeGenre.Header" xml:space="preserve">
+    <value>Genere</value>
+    <comment>genre header</comment>
+  </data>
+  <data name="AnimeGroupe.Header" xml:space="preserve">
+    <value>Anno</value>
+    <comment>year header</comment>
+  </data>
+  <data name="AnimeLanguage.Header" xml:space="preserve">
+    <value>Gruppo</value>
+    <comment>groupe header</comment>
+  </data>
+  <data name="AnimeMedia.Header" xml:space="preserve">
+    <value>Supporto</value>
+    <comment>media header</comment>
+  </data>
+  <data name="AnimeName.Header" xml:space="preserve">
+    <value>Nome</value>
+    <comment>name header</comment>
+  </data>
+  <data name="AnimenbDownloaded.Header" xml:space="preserve">
+    <value>Scaricate</value>
+    <comment>downloaded header</comment>
+  </data>
+  <data name="AnimenbSupport.Header" xml:space="preserve">
+    <value>Supporti</value>
+    <comment>support header</comment>
+  </data>
+  <data name="AnimenbVotes.Header" xml:space="preserve">
+    <value>Voto</value>
+    <comment>vote header</comment>
+  </data>
+  <data name="AnimenbWatched.Header" xml:space="preserve">
+    <value>Viste</value>
+    <comment>watched header</comment>
+  </data>
+  <data name="AnimeNote.Header" xml:space="preserve">
+    <value>Note</value>
+    <comment>note header</comment>
+  </data>
+  <data name="AnimeResolution.Header" xml:space="preserve">
+    <value>Risoluzione</value>
+    <comment>resolution header</comment>
+  </data>
+  <data name="AnimeType.Header" xml:space="preserve">
+    <value>Tipo</value>
+    <comment>type header</comment>
+  </data>
+  <data name="AnimeWatchState.Header" xml:space="preserve">
+    <value>Visto</value>
+    <comment>viewed header</comment>
+  </data>
+  <data name="AnimeYear.Header" xml:space="preserve">
+    <value>Lingua</value>
+    <comment>language header</comment>
   </data>
 </root>

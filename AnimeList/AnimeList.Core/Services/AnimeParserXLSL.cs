@@ -36,68 +36,61 @@ namespace AnimeList.Core.Services
             loadingStatus = 0;
         }
 
-        public async Task load()
+
+
+        public async Task<Anime> GetAnime(int row, ExcelWorksheet worksheet)
         {
 
-        }
+          
+               
+            int col = 1;
+            var anime = new Anime();
+            var nameHyperlink   = worksheet.Cells[row, col].Hyperlink;
+            var Name            = worksheet.Cells[row, col++].Value;
+            var Genre           = worksheet.Cells[row, col++].Value;
+            var Type            = worksheet.Cells[row, col++].Value;
+            var Year            = worksheet.Cells[row, col++].Value;
+            var Language        = worksheet.Cells[row, col++].Value;
+            var groupeHyperlink = worksheet.Cells[row, col].Hyperlink;
+            var Groupe          = worksheet.Cells[row, col++].Value;
+            var nbWatched       = worksheet.Cells[row, col++].Value;
+            var nbDownloaded    = worksheet.Cells[row, col++].Value;
+            var WatchState      = worksheet.Cells[row, col++].Value;
+            var Dwn             = worksheet.Cells[row, col++].Value;
+            var nbVotes         = worksheet.Cells[row, col++].Value;
+            var nbSupport       = worksheet.Cells[row, col++].Value;
+            var Media           = worksheet.Cells[row, col++].Value;
+            var Resolution      = worksheet.Cells[row, col++].Value;
+            var Cover           = worksheet.Cells[row, col++].Value;
+            var Note            = worksheet.Cells[row, col++].Value;
 
-        public Anime GetAnime(int row, ExcelWorksheet worksheet)
-        {
+            anime.NameHyperlink     = nameHyperlink != null ? nameHyperlink.ToString() : "";
+            anime.GroupHyperlink    = groupeHyperlink != null ? groupeHyperlink.ToString() : "";
+            anime.Name              = Name != null ? Name.ToString() : "";
+            anime.Genre             = Genre != null ? Genre.ToString() : "";
+            anime.Type              = Type != null ? Type.ToString() : "";
+            anime.Language          = Language != null ? Language.ToString() : "";
+            anime.Groupe            = Groupe != null ? Groupe.ToString() : "";
+            anime.WatchState        = WatchState != null ? WatchState.ToString() : "";
+            anime.Dwn               = Dwn != null ? Dwn.ToString() : "";
+            anime.Media             = Media != null ? Media.ToString() : "";
+            anime.Resolution        = Resolution != null ? Resolution.ToString() : "";
+            anime.Cover             = Cover != null ? Cover.ToString() : "";
+            anime.Note              = Note != null ? Note.ToString() : "";
+            try { anime.Year = Int16.Parse(Year.ToString()); } catch (Exception e) { anime.Year = 0; };
+            try { anime.nbWatched = Int16.Parse(nbWatched.ToString()); } catch (Exception e) { anime.nbWatched = 0; };
+            try { anime.nbDownloaded = Int16.Parse(nbDownloaded.ToString()); } catch (Exception e) { anime.nbDownloaded = 0; };
+            try { anime.nbVotes = Int16.Parse(nbVotes.ToString()); } catch (Exception e) { anime.nbVotes = 0; };
+            try { anime.nbSupport = Int16.Parse(nbSupport.ToString()); } catch (Exception e) { anime.nbSupport = 0; };
 
-            var t = Task<Anime>.Run(async () =>
-               {
-                   int col = 1;
-                   var anime = new Anime();
-                   var hyperlink = worksheet.Cells[row, col].Hyperlink;
-                   var Name = worksheet.Cells[row, col++].Value;
-                   var Genre = worksheet.Cells[row, col++].Value;
-                   var Type = worksheet.Cells[row, col++].Value;
-                   var Year = worksheet.Cells[row, col++].Value;
-                   var Language = worksheet.Cells[row, col++].Value;
-                   var Groupe = worksheet.Cells[row, col++].Value;
-                   var nbWatched = worksheet.Cells[row, col++].Value;
-                   var nbDownloaded = worksheet.Cells[row, col++].Value;
-                   var WatchState = worksheet.Cells[row, col++].Value;
-                   var Dwn = worksheet.Cells[row, col++].Value;
-                   var nbVotes = worksheet.Cells[row, col++].Value;
-                   var nbSupport = worksheet.Cells[row, col++].Value;
-                   var Media = worksheet.Cells[row, col++].Value;
-                   var Resolution = worksheet.Cells[row, col++].Value;
-                   var Cover = worksheet.Cells[row, col++].Value;
-                   var Note = worksheet.Cells[row, col++].Value;
-
-                   anime.hyperlink = hyperlink != null ? hyperlink.ToString() : "";
-                   anime.Name = Name != null ? Name.ToString() : "";
-                   anime.Genre = Genre != null ? Genre.ToString() : "";
-                   anime.Type = Type != null ? Type.ToString() : "";
-                   anime.Language = Language != null ? Language.ToString() : "";
-                   anime.Groupe = Groupe != null ? Groupe.ToString() : "";
-                   anime.WatchState = WatchState != null ? WatchState.ToString() : "";
-                   anime.Dwn = Dwn != null ? Dwn.ToString() : "";
-                   anime.Media = Media != null ? Media.ToString() : "";
-                   anime.Resolution = Resolution != null ? Resolution.ToString() : "";
-                   anime.Cover = Cover != null ? Cover.ToString() : "";
-                   anime.Note = Note != null ? Note.ToString() : "";
-                   try { anime.Year = Int16.Parse(Year.ToString()); } catch (Exception e) { anime.Year = 0; };
-                   try { anime.nbWatched = Int16.Parse(nbWatched.ToString()); } catch (Exception e) { anime.nbWatched = 0; };
-                   try { anime.nbDownloaded = Int16.Parse(nbDownloaded.ToString()); } catch (Exception e) { anime.nbDownloaded = 0; };
-                   try { anime.nbVotes = Int16.Parse(nbVotes.ToString()); } catch (Exception e) { anime.nbVotes = 0; };
-                   try { anime.nbSupport = Int16.Parse(nbSupport.ToString()); } catch (Exception e) { anime.nbSupport = 0; };
-
-                   return anime;
-               }
-                );
-           
-
-            onLoaded();
-            return t.Result;
-
+            
+            return anime;
             
         }
 
   
 
-        private IEnumerable<Anime> AllAnimes()
+        private ICollection<Anime> AllAnimes()
         {
             List<Anime> animes = new List<Anime>();
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
@@ -112,23 +105,23 @@ namespace AnimeList.Core.Services
 
                 for (int i = 2; i < totalRows; i++)
                 {
-                    var anime = GetAnime(i, worksheet);
+                    var anime =  GetAnime(i, worksheet);
                    // animes.Add(anime);
                     loadingStatus = (i / (totalRows - 2)) * 100;
-
+                    onLoaded();
+                    animes.Add(anime.Result);
                 }
 
             }
 
             return animes;
         }
-        public async Task<IEnumerable<Anime>> getAnimes()
+
+        public ICollection<Anime> getAnimes()
         {
-            await Task.CompletedTask;
             return AllAnimes();
-
         }
-
+        
         public void setFile(StorageFile file)
         {
             sFile = file;

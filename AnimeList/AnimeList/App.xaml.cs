@@ -3,6 +3,7 @@
 using AnimeList.Services;
 
 using Windows.ApplicationModel.Activation;
+using Windows.Storage;
 using Windows.UI.Xaml;
 
 namespace AnimeList
@@ -20,6 +21,7 @@ namespace AnimeList
         {
             InitializeComponent();
             UnhandledException += OnAppUnhandledException;
+             
 
             // Deferred execution until used. Check https://docs.microsoft.com/dotnet/api/system.lazy-1 for further info on Lazy<T> class.
             _activationService = new Lazy<ActivationService>(CreateActivationService);
@@ -30,7 +32,9 @@ namespace AnimeList
             if (!args.PrelaunchActivated)
             {
                 await ActivationService.ActivateAsync(args);
+                
             }
+
         }
 
         protected override async void OnActivated(IActivatedEventArgs args)
@@ -46,7 +50,7 @@ namespace AnimeList
 
         private ActivationService CreateActivationService()
         {
-            return new ActivationService(this, typeof(Views.MainPage), new Lazy<UIElement>(CreateShell));
+            return new ActivationService(this, typeof(Views.AnimeGridPage), new Lazy<UIElement>(CreateShell));
         }
 
         private UIElement CreateShell()

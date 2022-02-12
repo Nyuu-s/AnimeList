@@ -23,7 +23,8 @@ namespace AnimeList.Core.Models
         public string Resolution { get; set; }
         public string Cover { get; set; }
         public string Note { get; set; }
-        public string hyperlink { get; set; }
+        public string NameHyperlink { get; set; }
+        public string GroupHyperlink { get; set; }
 
 
 

@@ -11,7 +11,7 @@ namespace AnimeList.Core.Services
     public interface AnimeParser
     {
         event EventHandler<int> Loaded;
-        Task<IEnumerable<Anime>> getAnimes();
+        ICollection<Anime> getAnimes();
         void setFile(StorageFile file);
     }
 }

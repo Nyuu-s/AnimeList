@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using AnimeList.Core.Models;
 using AnimeList.Core.Services;
@@ -24,13 +25,30 @@ namespace AnimeList.ViewModels
         {
 
             parser.setFile(file);
-            var data = await parser.getAnimes();
+            var data = parser.getAnimes();
             foreach (var item in data)
             {
                 source.Add(item);
             }
+
+            //serialize source into Local
+            serializeAnimesAsync(source);
         }
 
+        private async void serializeAnimesAsync(ObservableCollection<Anime> data)
+        {
+            MemoryStream sessionData = new MemoryStream();
+            DataContractSerializer serializer = new DataContractSerializer(typeof(ObservableCollection<Anime>));
+            serializer.WriteObject(sessionData, data);
+            StorageFile dataFile = await ApplicationData.Current.LocalFolder.CreateFileAsync("animesData", CreationCollisionOption.ReplaceExisting);
+
+            using (Stream fileStream = await dataFile.OpenStreamForWriteAsync())
+            {
+                sessionData.Seek(0, SeekOrigin.Begin);
+                await sessionData.CopyToAsync(fileStream);
+                await fileStream.FlushAsync();
+            }
+        }
         private void Parser_Data_Loaded(object sender, int e)
         {
 

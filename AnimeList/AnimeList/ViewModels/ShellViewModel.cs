@@ -23,7 +23,7 @@ namespace AnimeList.ViewModels
         private IList<KeyboardAccelerator> _keyboardAccelerators;
 
         private ICommand _loadedCommand;
-        private ICommand _menuViewsMainCommand;
+        private ICommand _menuFileAddCommand;
         private ICommand _menuViewsAnimeGridCommand;
         private ICommand _menuViewsListDetailsCommand;
         private ICommand _menuViewsPreviewNoticeCommand;
@@ -31,14 +31,14 @@ namespace AnimeList.ViewModels
 
         public ICommand LoadedCommand => _loadedCommand ?? (_loadedCommand = new RelayCommand(OnLoaded));
 
-        public ICommand MenuViewsMainCommand => _menuViewsMainCommand ?? (_menuViewsMainCommand = new RelayCommand(OnMenuViewsMain));
 
         public ICommand MenuViewsAnimeGridCommand => _menuViewsAnimeGridCommand ?? (_menuViewsAnimeGridCommand = new RelayCommand(OnMenuViewsAnimeGrid));
 
         public ICommand MenuViewsListDetailsCommand => _menuViewsListDetailsCommand ?? (_menuViewsListDetailsCommand = new RelayCommand(OnMenuViewsListDetails));
 
-        public ICommand MenuViewsPreviewNoticeCommand => _menuViewsPreviewNoticeCommand ?? (_menuViewsPreviewNoticeCommand = new RelayCommand(OnMenuViewsPreviewNotice));
+       // public ICommand MenuViewsPreviewNoticeCommand => _menuViewsPreviewNoticeCommand ?? (_menuViewsPreviewNoticeCommand = new RelayCommand(OnMenuViewsPreviewNotice));
 
+        public ICommand MenuViewsAddCommand => _menuFileAddCommand ?? (_menuFileAddCommand = new RelayCommand(OnMenuViewsMain));
         public ICommand MenuFileExitCommand => _menuFileExitCommand ?? (_menuFileExitCommand = new RelayCommand(OnMenuFileExit));
 
         public ShellViewModel()
@@ -66,7 +66,7 @@ namespace AnimeList.ViewModels
 
         private void OnMenuViewsListDetails() => MenuNavigationHelper.UpdateView(typeof(ListDetailsPage));
 
-        private void OnMenuViewsPreviewNotice() => MenuNavigationHelper.UpdateView(typeof(PreviewNoticePage));
+       // private void OnMenuViewsPreviewNotice() => MenuNavigationHelper.UpdateView(typeof(PreviewNoticePage));
 
         private void OnMenuFileExit()
         {

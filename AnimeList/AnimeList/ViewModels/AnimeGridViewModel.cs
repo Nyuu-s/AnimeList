@@ -1,34 +1,72 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.IO;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 
 using AnimeList.Core.Models;
 using AnimeList.Core.Services;
 
 using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Windows.Storage;
+using Windows.Storage.Streams;
 
 namespace AnimeList.ViewModels
 {
     public class AnimeGridViewModel : ObservableObject
     {
-        public ObservableCollection<SampleOrder> Source { get; } = new ObservableCollection<SampleOrder>();
-
+       // public ObservableCollection<SampleOrder> Source { get; } = new ObservableCollection<SampleOrder>();
+        public ObservableCollection<Anime> Source1 { get; set; } = new ObservableCollection<Anime>();
+        public static ObservableCollection<Anime> Source1Cache;
+        public event EventHandler Loaded;
         public AnimeGridViewModel()
         {
+           
+            this.Loaded += AnimeGridViewModel_Loaded;
+        }
+
+        private async void AnimeGridViewModel_Loaded(object sender, EventArgs e)
+        {
+            Source1 = await GetAllAnimesAsynch();
+        }
+
+        public static async Task<ObservableCollection<Anime>> GetAllAnimesAsynch()
+        {
+            if (Source1Cache != null)
+                return Source1Cache;
+
+            
+            StorageFile file;
+            try
+            {
+                file = await ApplicationData.Current.LocalFolder.GetFileAsync("animesData");
+                using (IInputStream inStream = await file.OpenSequentialReadAsync())
+                {
+                    Source1Cache = new ObservableCollection<Anime>();
+                    DataContractSerializer serializer = new DataContractSerializer(typeof(ObservableCollection<Anime>));
+                    var animeData = (ObservableCollection<Anime>)serializer.ReadObject(inStream.AsStreamForRead());
+                    foreach (var item in animeData)
+                    {
+                        Source1Cache.Add(item);
+                    }
+                }
+            }
+            catch
+            {
+                await ApplicationData.Current.LocalFolder.CreateFileAsync("animesData", CreationCollisionOption.ReplaceExisting); // TODO replace to OpenIfExists
+            }
+
+            return Source1Cache;
+
         }
 
         public async Task LoadDataAsync()
         {
-            Source.Clear();
 
-            // Replace this with your actual data
-            
-            var data = await SampleDataService.GetGridDataAsync();
+           Loaded?.Invoke(this, null);
+          
 
-            foreach (var item in data)
-            {
-                Source.Add(item);
-            }
+
         }
     }
 }

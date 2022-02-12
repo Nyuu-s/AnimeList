@@ -23,7 +23,7 @@
             <TextBox x:Name="AddFile_Textbox" HorizontalAlignment="Left" Margin="18,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="-1.012,0.988" Width="461" AcceptsReturn="True" PlaceholderText="file path" IsReadOnly="True"/>
             <Button x:Name="addFileButton" Content="Add" Margin="499,191,0,0" VerticalAlignment="Top" Click="AddFile_Click" RenderTransformOrigin="1.401,0.463"/>
             <TextBlock HorizontalAlignment="Left" Margin="22,167,0,0" TextWrapping="Wrap" Text="Add from file ( .xlsl )" VerticalAlignment="Top" RenderTransformOrigin="0.915,0.387"/>
-            <Custom:ProgressBar x:Name="DataProgressBar" HorizontalAlignment="Left" Height="29" Margin="23,243,0,0" VerticalAlignment="Top" Width="188" Value="0"/>
+            <Custom:ProgressBar x:Name="DataProgressBar" HorizontalAlignment="Left" Height="29" Margin="23,243,0,0" VerticalAlignment="Top" Width="456" Value="0" Foreground="#FF009E60" RequestedTheme="Default"/>
             <!--
                 The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.

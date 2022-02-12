@@ -37,13 +37,13 @@
                 TODO WTS: You can edit the text for the menu in String/en-US/Resources.resw
                 -->
                 <winui:MenuBarItem x:Uid="ShellMenuBarItem_File">
-                    <MenuFlyoutItem x:ConnectionId='10' x:Uid="ShellMenuItem_File_Exit"                                                  />
+                    <MenuFlyoutItem x:ConnectionId='8' x:Uid="ShellMenuItem_File_Exit"                                                  />
+                    <MenuFlyoutItem x:ConnectionId='9' x:Uid="ShellMenuItem_File_Add"                                                  />
                 </winui:MenuBarItem>
                 <winui:MenuBarItem x:Uid="ShellMenuBarItem_Views">
-                    <MenuFlyoutItem x:ConnectionId='6' x:Uid="ShellMenuItem_Views_Main"                                                   />
-                    <MenuFlyoutItem x:ConnectionId='7' x:Uid="ShellMenuItem_Views_AnimeGrid"                                                        />
-                    <MenuFlyoutItem x:ConnectionId='8' x:Uid="ShellMenuItem_Views_ListDetails"                                                          />
-                    <MenuFlyoutItem x:ConnectionId='9' x:Uid="ShellMenuItem_Views_PreviewNotice"                                                            />
+                    <MenuFlyoutItem x:ConnectionId='6' x:Uid="ShellMenuItem_Views_AnimeGrid"                                                        />
+                    <MenuFlyoutItem x:ConnectionId='7' x:Uid="ShellMenuItem_Views_ListDetails"                                                          />
+                    <!--<MenuFlyoutItem x:Uid="ShellMenuItem_Views_PreviewNotice" Command="{x:Bind ViewModel.MenuViewsPreviewNoticeCommand}" />-->
                 </winui:MenuBarItem>
             </winui:MenuBar>
             <Grid Grid.Row="1">

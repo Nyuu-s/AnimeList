@@ -40,6 +40,8 @@ namespace AnimeList.Views
                 //temp fix : copy file into app directory for permissions, parse data, delete copied file
                 StorageFile copied;
 
+                AddFile_Textbox.Text = file.Name;
+                ProgressBar_loading_data(this, 10);
                 //if copied file already exist use it else paste it
                 if (await storageFolder.TryGetItemAsync(file.Name) != null)
                 {
@@ -49,9 +51,9 @@ namespace AnimeList.Views
                 {
                     copied = await file.CopyAsync(storageFolder);
                 }
-                    AddFile_Textbox.Text = file.Name;
                 
                 await ViewModel.loadDataAsynch(copied);
+
 
                 await copied.DeleteAsync();
 

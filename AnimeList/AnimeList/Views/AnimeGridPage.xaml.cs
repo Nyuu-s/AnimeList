@@ -1,7 +1,7 @@
 ﻿using System;
-
+using System.IO;
 using AnimeList.ViewModels;
-
+using Windows.Storage;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
@@ -16,13 +16,21 @@ namespace AnimeList.Views
         public AnimeGridPage()
         {
             InitializeComponent();
+        
+
         }
+
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
 
             await ViewModel.LoadDataAsync();
+        }
+
+        private void DataGrid_Sorting(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumnEventArgs e)
+        {
+
         }
     }
 }
