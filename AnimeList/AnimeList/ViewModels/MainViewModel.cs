@@ -31,12 +31,15 @@ namespace AnimeList.ViewModels
                 source.Add(item);
             }
 
+  
             //serialize source into Local
             serializeAnimesAsync(source);
         }
 
+ 
         private async void serializeAnimesAsync(ObservableCollection<Anime> data)
         {
+            
             MemoryStream sessionData = new MemoryStream();
             DataContractSerializer serializer = new DataContractSerializer(typeof(ObservableCollection<Anime>));
             serializer.WriteObject(sessionData, data);

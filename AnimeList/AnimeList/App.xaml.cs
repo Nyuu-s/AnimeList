@@ -31,6 +31,7 @@ namespace AnimeList
         {
             if (!args.PrelaunchActivated)
             {
+                await ViewModels.AnimeGridViewModel.GetAllAnimesAsynch();
                 await ActivationService.ActivateAsync(args);
                 
             }

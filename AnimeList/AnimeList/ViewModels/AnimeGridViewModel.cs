@@ -21,21 +21,51 @@ namespace AnimeList.ViewModels
         public event EventHandler Loaded;
         public AnimeGridViewModel()
         {
-           
+            
             this.Loaded += AnimeGridViewModel_Loaded;
+
         }
+
 
         private async void AnimeGridViewModel_Loaded(object sender, EventArgs e)
         {
-            Source1 = await GetAllAnimesAsynch();
+            Source1 = await LoadAnimes();
+            
         }
 
+        public static async Task<ObservableCollection<Anime>> LoadAnimes()
+        {
+           
+            return await Task.Run(() => { return Source1Cache; });
+        }
+
+        private static async Task<Boolean> PurgeLocalFilesDebug()
+        {
+            return await Task.Run(  async () =>
+            {
+                try
+                {
+                    var localfiles = await ApplicationData.Current.LocalFolder.GetFilesAsync();
+                    foreach (var localfile in localfiles)
+                    {
+                        await localfile.DeleteAsync();
+                    }
+                    return true;
+                }catch (Exception ex)
+                {
+                    return false;
+                }
+  
+            });
+
+        }
         public static async Task<ObservableCollection<Anime>> GetAllAnimesAsynch()
         {
             if (Source1Cache != null)
                 return Source1Cache;
 
-            
+   
+
             StorageFile file;
             try
             {
@@ -56,9 +86,12 @@ namespace AnimeList.ViewModels
                 await ApplicationData.Current.LocalFolder.CreateFileAsync("animesData", CreationCollisionOption.ReplaceExisting); // TODO replace to OpenIfExists
             }
 
+
+
             return Source1Cache;
 
         }
+  
 
         public async Task LoadDataAsync()
         {

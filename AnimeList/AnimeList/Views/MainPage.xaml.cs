@@ -56,6 +56,7 @@ namespace AnimeList.Views
 
 
                 await copied.DeleteAsync();
+                await AnimeGridViewModel.GetAllAnimesAsynch();
 
             }
         }
