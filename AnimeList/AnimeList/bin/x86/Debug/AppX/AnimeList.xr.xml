@@ -11,9 +11,9 @@
     <RootPropertyPathName Name="WatchState" />
     <RootPropertyPathName Name="nbDownloaded" />
     <RootPropertyPathName Name="nbWatched" />
+    <RootPropertyPathName Name="Groupe" />
     <RootPropertyPathName Name="Language" />
     <RootPropertyPathName Name="Year" />
-    <RootPropertyPathName Name="Groupe" />
     <RootPropertyPathName Name="Type" />
     <RootPropertyPathName Name="Genre" />
     <RootPropertyPathName Name="Name" />

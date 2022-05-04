@@ -37,9 +37,9 @@
                     <controls:DataGridTextColumn x:Uid="AnimeName" Binding="{Binding Name}" CanUserSort="True" SortDirection="Ascending"/>
                     <controls:DataGridTextColumn x:Uid="AnimeGenre" Binding="{Binding Genre}" />
                     <controls:DataGridTextColumn x:Uid="AnimeType" Binding="{Binding Type}"  />
-                    <controls:DataGridTextColumn x:Uid="AnimeGroupe" Binding="{Binding Groupe}"  />
                     <controls:DataGridTextColumn x:Uid="AnimeYear" Binding="{Binding Year}"/>
                     <controls:DataGridTextColumn x:Uid="AnimeLanguage" Binding="{Binding Language}"  />
+                    <controls:DataGridTextColumn x:Uid="AnimeGroupe" Binding="{Binding Groupe}"  />
                     <controls:DataGridTextColumn x:Uid="AnimenbWatched" Binding="{Binding nbWatched}" />
                     <controls:DataGridTextColumn x:Uid="AnimenbDownloaded" Binding="{Binding nbDownloaded}"  />
                     <controls:DataGridTextColumn x:Uid="AnimeWatchState" Binding="{Binding WatchState}"  />

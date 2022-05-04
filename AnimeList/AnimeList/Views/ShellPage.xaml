@@ -37,8 +37,8 @@
                 TODO WTS: You can edit the text for the menu in String/en-US/Resources.resw
                 -->
                 <winui:MenuBarItem x:Uid="ShellMenuBarItem_File">
-                    <MenuFlyoutItem x:Uid="ShellMenuItem_File_Exit" Command="{x:Bind ViewModel.MenuFileExitCommand}" />
                     <MenuFlyoutItem x:Uid="ShellMenuItem_File_Add" Command="{x:Bind ViewModel.MenuViewsAddCommand}" />
+                    <MenuFlyoutItem x:Uid="ShellMenuItem_File_Exit" Command="{x:Bind ViewModel.MenuFileExitCommand}" />
                 </winui:MenuBarItem>
                 <winui:MenuBarItem x:Uid="ShellMenuBarItem_Views">
                     <MenuFlyoutItem x:Uid="ShellMenuItem_Views_AnimeGrid" Command="{x:Bind ViewModel.MenuViewsAnimeGridCommand}" />
