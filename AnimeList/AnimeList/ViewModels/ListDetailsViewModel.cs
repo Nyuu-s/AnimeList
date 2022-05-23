@@ -13,15 +13,15 @@ namespace AnimeList.ViewModels
 {
     public class ListDetailsViewModel : ObservableObject
     {
-        private SampleOrder _selected;
-
-        public SampleOrder Selected
+        private Anime _selected;
+        
+        public Anime Selected
         {
             get { return _selected; }
             set { SetProperty(ref _selected, value); }
         }
 
-        public ObservableCollection<SampleOrder> SampleItems { get; private set; } = new ObservableCollection<SampleOrder>();
+        public ObservableCollection<Anime> AnimesItems { get; private set; } = new ObservableCollection<Anime>();
 
         public ListDetailsViewModel()
         {
@@ -29,18 +29,18 @@ namespace AnimeList.ViewModels
 
         public async Task LoadDataAsync(ListDetailsViewState viewState)
         {
-            SampleItems.Clear();
+            AnimesItems.Clear();
 
-            var data = await SampleDataService.GetListDetailsDataAsync();
+            var data = await ViewModels.AnimeGridViewModel.GetAllAnimesAsynch();
 
             foreach (var item in data)
             {
-                SampleItems.Add(item);
+                AnimesItems.Add(item);
             }
 
             if (viewState == ListDetailsViewState.Both)
             {
-                Selected = SampleItems.First();
+                Selected = AnimesItems.First();
             }
         }
     }

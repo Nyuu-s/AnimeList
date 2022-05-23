@@ -10,23 +10,18 @@
     xmlns:views="using:AnimeList.Views"
     mc:Ignorable="d">
     <Page.Resources>
-        <DataTemplate x:Key="ItemTemplate"                               >
+        <DataTemplate x:Key="ItemTemplate"                         >
             <Grid x:ConnectionId='7' Height="60">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <FontIcon x:ConnectionId='8'
-                    Grid.Column="0"
-                    VerticalAlignment="Center"
-                    FontSize="32"
-                                            />
+                
                 <StackPanel
                     Grid.Column="1"
                     Margin="{StaticResource SmallLeftMargin}"
                     VerticalAlignment="Center">
-                    <TextBlock x:ConnectionId='9' Style="{ThemeResource ListTitleStyle}"                         />
-                    <TextBlock x:ConnectionId='10' Style="{StaticResource ListSubTitleStyle}"                        />
+                    <TextBlock x:ConnectionId='8' Style="{ThemeResource ListTitleStyle}"                      />
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -59,8 +54,8 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid x:ConnectionId='11' x:Name="ContentArea">
-        <controls:ListDetailsView x:ConnectionId='12'
+    <Grid x:ConnectionId='9' x:Name="ContentArea">
+        <controls:ListDetailsView x:ConnectionId='10'
             x:Name="ListDetailsViewControl"
             x:Uid="ListDetails"
             BackButtonBehavior="Inline"

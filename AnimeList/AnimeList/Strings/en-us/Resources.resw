@@ -162,7 +162,7 @@
     <comment>No selection text for ListDetails</comment>
   </data>
   <data name="ListDetails.ListHeader" xml:space="preserve">
-    <value>ListDetails</value>
+    <value>Animes Details</value>
     <comment>Title for ListDetailsPage</comment>
   </data>
   <data name="ShellMenuItem_Views_ListDetails.Text" xml:space="preserve">

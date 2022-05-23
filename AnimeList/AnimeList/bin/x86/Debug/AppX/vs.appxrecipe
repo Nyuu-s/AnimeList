@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>E6F761FBC422C38110A3704F87FAABFB15507268610EE0FFAE51235C3D5265DF</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>AEBB520471A6FC44791B756A6950AB6E245C791B170DF706E4622021E5663A78</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>666C55FB-A293-49C4-93C2-5F07DBCE1DE4_1.0.0.0_x86__h8rqv0gxgvjbt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>666C55FB-A293-49C4-93C2-5F07DBCE1DE4_h8rqv0gxgvjbt!App</RegisteredUserModeAppID>
     <RegisteredPackageID>666C55FB-A293-49C4-93C2-5F07DBCE1DE4</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-03T20:20:52.191</Modified>
+      <Modified>2022-05-23T23:02:40.934</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\AnimeList.exe">
       <PackagePath>entrypoint\AnimeList.exe</PackagePath>
-      <Modified>2022-05-03T20:20:51.495</Modified>
+      <Modified>2022-05-23T23:02:40.169</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\colorcode.core\2.0.6\lib\netstandard1.4\ColorCode.Core.dll">
       <PackagePath>ColorCode.Core.dll</PackagePath>
@@ -192,7 +192,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList.Core\bin\Debug\netstandard2.0\AnimeList.Core.dll">
       <PackagePath>AnimeList.Core.dll</PackagePath>
-      <Modified>2022-04-08T21:38:39.781</Modified>
+      <Modified>2022-05-23T18:40:34.786</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\win2d.uwp\1.25.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -225,6 +225,10 @@
     <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\microsoft.toolkit.uwp.ui.controls.media\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Media\Microsoft.Toolkit.Uwp.UI.Controls.Media.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Media\Microsoft.Toolkit.Uwp.UI.Controls.Media.xr.xml</PackagePath>
       <Modified>2021-11-18T21:55:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\Assets\moon.jpg">
+      <PackagePath>Assets\moon.jpg</PackagePath>
+      <Modified>2022-05-08T23:12:22.302</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -266,59 +270,59 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\AnimeList.xr.xml">
       <PackagePath>AnimeList.xr.xml</PackagePath>
-      <Modified>2022-05-03T20:18:57.784</Modified>
+      <Modified>2022-05-23T22:56:01.665</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.394</Modified>
+      <Modified>2022-05-23T23:02:40.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Styles\Page.xbf">
       <PackagePath>Styles\Page.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.393</Modified>
+      <Modified>2022-05-23T23:02:40.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Styles\_Colors.xbf">
       <PackagePath>Styles\_Colors.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.393</Modified>
+      <Modified>2022-05-23T23:02:40.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Styles\_FontSizes.xbf">
       <PackagePath>Styles\_FontSizes.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.393</Modified>
+      <Modified>2022-05-23T23:02:40.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Styles\_Thickness.xbf">
       <PackagePath>Styles\_Thickness.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.393</Modified>
+      <Modified>2022-05-23T23:02:40.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Styles\TextBlock.xbf">
       <PackagePath>Styles\TextBlock.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.393</Modified>
+      <Modified>2022-05-23T23:02:40.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Views\AnimeGridPage.xbf">
       <PackagePath>Views\AnimeGridPage.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.394</Modified>
+      <Modified>2022-05-23T23:02:40.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Views\ListDetailsDetailControl.xbf">
       <PackagePath>Views\ListDetailsDetailControl.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.390</Modified>
+      <Modified>2022-05-23T23:02:40.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Views\ListDetailsPage.xbf">
       <PackagePath>Views\ListDetailsPage.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.394</Modified>
+      <Modified>2022-05-23T23:02:40.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.394</Modified>
+      <Modified>2022-05-23T23:02:40.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Views\PreviewNoticePage.xbf">
       <PackagePath>Views\PreviewNoticePage.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.394</Modified>
+      <Modified>2022-05-23T23:02:40.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Views\ShellContentDialog.xbf">
       <PackagePath>Views\ShellContentDialog.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.394</Modified>
+      <Modified>2022-05-23T23:02:40.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Views\ShellPage.xbf">
       <PackagePath>Views\ShellPage.xbf</PackagePath>
-      <Modified>2022-05-03T20:20:51.394</Modified>
+      <Modified>2022-05-23T23:02:40.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -330,11 +334,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-05-03T20:19:57.574</Modified>
+      <Modified>2022-05-23T23:02:40.417</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\Core\AnimeList.exe">
       <PackagePath>AnimeList.exe</PackagePath>
-      <Modified>2022-05-03T20:20:52.188</Modified>
+      <Modified>2022-05-23T23:02:40.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>

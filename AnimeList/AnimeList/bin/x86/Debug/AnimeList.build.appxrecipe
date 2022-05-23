@@ -169,6 +169,9 @@
     <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\microsoft.toolkit.uwp.ui.controls.media\7.1.2\lib\uap10.0.17763\Microsoft.Toolkit.Uwp.UI.Controls.Media\Microsoft.Toolkit.Uwp.UI.Controls.Media.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.Media\Microsoft.Toolkit.Uwp.UI.Controls.Media.xr.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\Assets\moon.jpg">
+      <PackagePath>Assets\moon.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\AnimeList\AnimeList\AnimeList\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

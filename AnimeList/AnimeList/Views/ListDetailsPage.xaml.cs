@@ -20,6 +20,7 @@ namespace AnimeList.Views
         private async void ListDetailsPage_Loaded(object sender, RoutedEventArgs e)
         {
             await ViewModel.LoadDataAsync(ListDetailsViewControl.ViewState);
+           
         }
     }
 }

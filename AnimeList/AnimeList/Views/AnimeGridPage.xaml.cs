@@ -16,8 +16,6 @@ namespace AnimeList.Views
         public AnimeGridPage()
         {
             InitializeComponent();
-        
-
         }
 
 
