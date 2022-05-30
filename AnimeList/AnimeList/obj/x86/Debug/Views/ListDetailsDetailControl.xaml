@@ -41,9 +41,10 @@
              
                 <StackPanel Grid.Row="1" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" >
                     
-                    <Image x:ConnectionId='21' x:Name="testImg"  Source="https://cdn.myanimelist.net/images/anime/2/35633.jpg"
+                    <Image x:ConnectionId='21' x:Name="animeImg" Visibility="Collapsed" Source="https://cdn.myanimelist.net/images/anime/2/35633.jpg"
                            Height="400"
                            Width="400" ></Image>
+                    
 
                     <WebView x:ConnectionId='22' Visibility="Collapsed"
                              x:Name="webView1"

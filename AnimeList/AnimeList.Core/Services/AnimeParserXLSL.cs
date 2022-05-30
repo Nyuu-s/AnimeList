@@ -44,6 +44,7 @@ namespace AnimeList.Core.Services
           
                
             int col = 1;
+            
             var anime = new Anime();
             var nameHyperlink   = worksheet.Cells[row, col].Hyperlink;
             var Name            = worksheet.Cells[row, col++].Value;
@@ -77,6 +78,7 @@ namespace AnimeList.Core.Services
             anime.Resolution        = Resolution != null ? Resolution.ToString() : "";
             anime.Cover             = Cover != null ? Cover.ToString() : "";
             anime.Note              = Note != null ? Note.ToString() : "";
+            anime.ID = row;
             try { anime.Year = Int16.Parse(Year.ToString()); } catch (Exception e) { anime.Year = 0; };
             try { anime.nbWatched = Int16.Parse(nbWatched.ToString()); } catch (Exception e) { anime.nbWatched = 0; };
             try { anime.nbDownloaded = Int16.Parse(nbDownloaded.ToString()); } catch (Exception e) { anime.nbDownloaded = 0; };

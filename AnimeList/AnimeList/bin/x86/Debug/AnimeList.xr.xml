@@ -82,14 +82,30 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
+      <RootProperty Name="Name" />
+      <RootProperty Name="SelectionMode" />
       <RootProperty Name="AutoGenerateColumns" />
       <RootProperty Name="GridLinesVisibility" />
       <RootProperty Name="ItemsSource" />
+      <RootProperty Name="RowStyle" />
       <RootProperty Name="Columns" />
+      <RootEvent Name="SelectionChanged" />
       <RootEvent Name="Sorting" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
       <RootProperty Name="Mode" />
+    </RootType>
+    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridRow" />
+    <RootType FullName="Windows.UI.Xaml.UIElement">
+      <RootProperty Name="ContextFlyout" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyout">
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutItem">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Command" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn">
       <RootProperty Name="Binding" />
@@ -129,6 +145,7 @@
       <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Visibility" />
       <RootProperty Name="Source" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
@@ -223,9 +240,6 @@
     </RootType>
     <RootType FullName="Microsoft.UI.Xaml.Controls.MenuBarItem">
       <RootProperty Name="Items" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutItem">
-      <RootProperty Name="Command" />
     </RootType>
     <RootType FullName="AnimeList.Views.ShellPage" />
   </Roots.RootTypes>

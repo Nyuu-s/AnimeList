@@ -29,6 +29,7 @@ namespace AnimeList.ViewModels
 
         private async void AnimeGridViewModel_Loaded(object sender, EventArgs e)
         {
+            
             Source1 = await LoadAnimes();
             
         }
@@ -61,6 +62,7 @@ namespace AnimeList.ViewModels
         }
         public static async Task<ObservableCollection<Anime>> GetAllAnimesAsynch()
         {
+           
             if (Source1Cache != null)
                 return Source1Cache;
 
@@ -72,11 +74,13 @@ namespace AnimeList.ViewModels
                 file = await ApplicationData.Current.LocalFolder.GetFileAsync("animesData");
                 using (IInputStream inStream = await file.OpenSequentialReadAsync())
                 {
+                    var cpt = 0;
                     Source1Cache = new ObservableCollection<Anime>();
                     DataContractSerializer serializer = new DataContractSerializer(typeof(ObservableCollection<Anime>));
                     var animeData = (ObservableCollection<Anime>)serializer.ReadObject(inStream.AsStreamForRead());
                     foreach (var item in animeData)
                     {
+                        item.ID = cpt++;
                         Source1Cache.Add(item);
                     }
                 }

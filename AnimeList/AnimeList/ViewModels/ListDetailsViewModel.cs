@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,7 +15,7 @@ namespace AnimeList.ViewModels
     public class ListDetailsViewModel : ObservableObject
     {
         private Anime _selected;
-        
+        public static ObservableCollection<Anime> AnimeItemsCache = AnimeGridViewModel.Source1Cache;
         public Anime Selected
         {
             get { return _selected; }
@@ -29,19 +30,30 @@ namespace AnimeList.ViewModels
 
         public async Task LoadDataAsync(ListDetailsViewState viewState)
         {
+            if (AnimeItemsCache.Count > 0)
+            {
+                Selected = AnimeItemsCache.First();
+                AnimesItems = AnimeItemsCache;
+                return;
+            }
+
             AnimesItems.Clear();
+           
+                var data = await ViewModels.AnimeGridViewModel.GetAllAnimesAsynch();
 
-            var data = await ViewModels.AnimeGridViewModel.GetAllAnimesAsynch();
+                foreach (var item in data)
+                {
+                    AnimesItems.Add(item);
+                    AnimeItemsCache.Add(item);
+                }
+                
 
-            foreach (var item in data)
-            {
-                AnimesItems.Add(item);
-            }
-
-            if (viewState == ListDetailsViewState.Both)
-            {
-                Selected = AnimesItems.First();
-            }
+                if (viewState == ListDetailsViewState.Both)
+                {
+                    Selected = AnimesItems.First();
+                }
+            
+                return;
         }
     }
 }

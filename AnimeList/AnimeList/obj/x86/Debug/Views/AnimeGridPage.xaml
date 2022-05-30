@@ -20,13 +20,32 @@
             Margin="{StaticResource SmallLeftMargin}"
             Style="{StaticResource PageTitleStyle}" />
         <Grid Grid.Row="1">
+
+            
             <controls:DataGrid x:ConnectionId='3'
+                                                            
+                Name="dataGrid"
+                SelectionMode="Single"
                 x:Uid="DataTable"
                 AutoGenerateColumns="False"
                 GridLinesVisibility="Horizontal"
                                                                                                 >
 
-                
+                <controls:DataGrid.RowStyle>
+                    
+                    <Style TargetType="controls:DataGridRow">
+                        <Setter Property="controls:DataGridRow.ContextFlyout">
+                            <Setter.Value>
+                                <MenuFlyout>
+                                    <MenuFlyoutItem x:ConnectionId='4' x:Name="MyMenuItem"
+                                                            
+                                    Text="See Details" />
+                                </MenuFlyout>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </controls:DataGrid.RowStyle>
+
                 <controls:DataGrid.Columns>
                     <!--
                         TODO WTS:

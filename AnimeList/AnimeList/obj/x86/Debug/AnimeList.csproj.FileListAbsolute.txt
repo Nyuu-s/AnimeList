@@ -177,3 +177,6 @@ C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\System.IO.FileSystem.Acc
 C:\Projects\AnimeList\AnimeList\AnimeList\obj\x86\Debug\FxResources.System.IO.FileSystem.AccessControl.SR.resw
 C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\System.Security.AccessControl.dll
 C:\Projects\AnimeList\AnimeList\AnimeList\obj\x86\Debug\FxResources.System.Security.AccessControl.SR.resw
+C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\HtmlAgilityPack.dll
+C:\Projects\AnimeList\AnimeList\AnimeList\bin\x86\Debug\HtmlAgilityPack.pdb
+C:\Projects\AnimeList\AnimeList\AnimeList\obj\x86\Debug\HtmlAgilityPack.pri.xml
