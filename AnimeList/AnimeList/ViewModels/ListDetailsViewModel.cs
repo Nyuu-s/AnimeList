@@ -22,18 +22,20 @@ namespace AnimeList.ViewModels
             set { SetProperty(ref _selected, value); }
         }
 
-        public ObservableCollection<Anime> AnimesItems { get; private set; } = new ObservableCollection<Anime>();
+        public ObservableCollection<Anime> AnimesItems { get; private set; } = new ObservableCollection<Anime>(AnimeItemsCache);
 
         public ListDetailsViewModel()
         {
+           
         }
 
         public async Task LoadDataAsync(ListDetailsViewState viewState)
         {
+            Debug.WriteLine(AnimeItemsCache.Count);
             if (AnimeItemsCache.Count > 0)
             {
+
                 Selected = AnimeItemsCache.First();
-                AnimesItems = AnimeItemsCache;
                 return;
             }
 

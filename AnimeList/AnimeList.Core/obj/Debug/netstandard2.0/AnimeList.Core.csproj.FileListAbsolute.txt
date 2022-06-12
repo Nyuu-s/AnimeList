@@ -1,12 +1,12 @@
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\bin\Debug\netstandard2.0\AnimeList.Core.deps.json
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\bin\Debug\netstandard2.0\AnimeList.Core.dll
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\bin\Debug\netstandard2.0\AnimeList.Core.pdb
+C:\Projects\AnimeList\AnimeList\AnimeList.Core\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.csproj.AssemblyReference.cache
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.AssemblyInfoInputs.cache
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.AssemblyInfo.cs
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.csproj.CoreCompileInputs.cache
+C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.csproj.CopyComplete
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.dll
 C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.pdb
-C:\Projects\AnimeList\AnimeList\AnimeList.Core\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
-C:\Projects\AnimeList\AnimeList\AnimeList.Core\obj\Debug\netstandard2.0\AnimeList.Core.csproj.CopyComplete

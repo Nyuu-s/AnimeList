@@ -17,139 +17,140 @@
         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
         VerticalScrollMode="Enabled"
         IsTabStop="True">
-        
+
         <Grid VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="35*" />
+                <ColumnDefinition Width="65*" />
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
+            <Grid Grid.Column="0"  >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                
-                
+
+
                 <HyperlinkButton Grid.Row="0"
                                  x:Name="Title"
                                  Content="{x:Bind ListMenuItem.Name}"
                                  NavigateUri="{x:Bind ListMenuItem.NameHyperlink}"
                                  Style="{ThemeResource TextBlockButtonStyle}"
                                  FontSize="{StaticResource LargeFontSize}"
-                                
-                                 ></HyperlinkButton>
-             
-                <StackPanel Grid.Row="1" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" >
-                    
-                    <Image x:Name="animeImg"  Source="https://cdn.myanimelist.net/images/anime/2/35633.jpg"
-                           Height="400"
-                           Width="400" ></Image>
-                    
+                                 />
 
-                    <WebView Visibility="Collapsed"
-                             x:Name="webView1"
-                             Source="{x:Bind ListMenuItem.NameHyperlink}"
-                             />
-                </StackPanel>
-            </Grid>
-            <Grid Grid.Column="1">
-                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50">
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Vertical" >
+                    <Image x:Name="animeImg" 
+                           Height="350"
+                           Width="350" Stretch="Uniform" >
+                    </Image>
+                    <StackPanel HorizontalAlignment="Center"  x:Name="PanelVote">
 
-                    <StackPanel Name="block"  >
-                        <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Nome" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Name, Mode=OneWay}" />
-                        <TextBlock
-                    Margin="{StaticResource SmallTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Genere" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Genre, Mode=OneWay}" />
-                        <TextBlock
-                    Margin="{StaticResource SmallTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Tipo" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Type, Mode=OneWay}" />
-                        <TextBlock
-                    Margin="{StaticResource SmallTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Anno" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Year, Mode=OneWay}" />
-                        <TextBlock
-                    Margin="{StaticResource SmallTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Lingua" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Language, Mode=OneWay}" />
-
-                        <TextBlock
-                    Margin="{StaticResource MediumTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Gruppo" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Groupe, Mode=OneWay}" />
-
-                        <TextBlock
-                    Margin="{StaticResource MediumTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Viste" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.nbWatched, Mode=OneWay}" />
-
-                        <TextBlock
-                    Margin="{StaticResource MediumTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Scariate" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.nbDownloaded, Mode=OneWay}" />
-
-                        <TextBlock
-                    Margin="{StaticResource MediumTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Visto" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.WatchState, Mode=OneWay}" />
-
-                        <TextBlock
-                    Margin="{StaticResource MediumTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Dwn" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Dwn, Mode=OneWay}" />
-
-                        <TextBlock
-                    Margin="{StaticResource MediumTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Voto" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.nbVotes, Mode=OneWay}" />
-
-                        <TextBlock
-                    Margin="{StaticResource MediumTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Supporti" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.nbSupport, Mode=OneWay}" />
-
-                        <TextBlock
-                    Margin="{StaticResource MediumTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Supporto" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Media, Mode=OneWay}" />
-
-                        <TextBlock
-                    Margin="{StaticResource MediumTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Risoluzione" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Resolution, Mode=OneWay}" />
-
-                        <TextBlock
-                    Margin="{StaticResource MediumTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Cover" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Cover, Mode=OneWay}" />
-
-                        <TextBlock
-                    Margin="{StaticResource MediumTopMargin}"
-                    Style="{StaticResource DetailSubTitleStyle}"
-                    Text="Note" />
-                        <TextBlock Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Note, Mode=OneWay}" />
+                        <TextBlock Style="{StaticResource DetailSubTitleStyle}"
+                                   Text="Voto"  
+                                   Margin="{StaticResource SmallTopMargin}"
+                                   />
+                        <TextBlock 
+                                   Style="{StaticResource DetailBodyBaseMediumStyle}"
+                                   Text="{x:Bind ListMenuItem.nbVotes, Mode=OneWay}"
+                                   Margin="{StaticResource SmallLeftMargin}"
+                                   />
+                        
                     </StackPanel>
                 </StackPanel>
             </Grid>
+            <Grid Grid.Column="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel  Grid.Row="1" HorizontalAlignment="Left" >
+
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Nome"         Grid.Row="0" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Genere"       Grid.Row="1" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Tipo"         Grid.Row="2" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Anno"         Grid.Row="3" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Lingua"       Grid.Row="4" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Gruppo"       Grid.Row="5" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Viste"        Grid.Row="6" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Scariate"     Grid.Row="7" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Visto"        Grid.Row="8" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Dwn"          Grid.Row="9" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Supporti"     Grid.Row="10" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Supporto"     Grid.Row="11" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Risoluzione"  Grid.Row="12" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Cover"        Grid.Row="13" Grid.Column="0"/>
+                            <TextBlock Style="{StaticResource DetailSubTitleStyle}" Text="Note"         Grid.Row="14" Grid.Column="0"/>
+
+                            <TextBlock Grid.Column="1" Grid.Row="0"  Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Name, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="1"  Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Genre, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="2"  Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Type, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="3"  Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Year, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="4"  Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Language, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="5"  Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Groupe, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="6"  Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.nbWatched, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="7"  Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.nbDownloaded, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="8"  Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.WatchState, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="9"  Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Dwn, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="10" Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.nbSupport, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="11" Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Media, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="12" Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Resolution, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="13" Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Cover, Mode=OneWay}" />
+                            <TextBlock Grid.Column="1" Grid.Row="14" Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Bottom" Style="{StaticResource DetailBodyBaseMediumStyle}" Text="{x:Bind ListMenuItem.Note, Mode=OneWay}" />
+
+                        <TextBlock Style="{StaticResource DetailSubTitleStyle}"
+                                   Text="Voto"  
+                                   Grid.Column="0"
+                                   Grid.Row="15"
+                                   Visibility="Collapsed"
+                                   x:Name="VoteTitle"
+                                   />
+                        <TextBlock 
+                                   Style="{StaticResource DetailBodyBaseMediumStyle}"
+                                   Text="{x:Bind ListMenuItem.nbVotes, Mode=OneWay}"
+                                   Margin="{StaticResource MediumLeftMargin}"
+                                   Grid.Column="1"
+                                   Grid.Row="15"
+                                   Visibility="Collapsed"
+                                   x:Name="VoteValue"
+                                   />
+
+
+
+                    </Grid>
+
+
+                    
+                </StackPanel>
+            </Grid>
             
-     
+
         </Grid>
-       
+
     </ScrollViewer>
 </UserControl>

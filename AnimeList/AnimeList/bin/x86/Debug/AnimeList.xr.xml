@@ -56,6 +56,7 @@
       <RootProperty Name="Style" />
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="RenderTransformOrigin" />
@@ -131,11 +132,10 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
-      <RootProperty Name="Name" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Orientation" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
@@ -145,14 +145,9 @@
       <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Visibility" />
-      <RootProperty Name="Source" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.WebView">
-      <RootProperty Name="Visibility" />
-      <RootProperty Name="Source" />
+      <RootProperty Name="Stretch" />
     </RootType>
     <RootType FullName="AnimeList.Views.ListDetailsDetailControl">
       <RootProperty Name="ListMenuItem" />

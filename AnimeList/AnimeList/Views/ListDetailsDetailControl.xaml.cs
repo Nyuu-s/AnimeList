@@ -103,9 +103,17 @@ namespace AnimeList.Views
             {
                 control.animeImg.Source = new BitmapImage( new Uri(response.message));
                 control.animeImg.Visibility = Visibility.Visible;
+                control.PanelVote.Visibility = Visibility.Visible;
+                control.VoteTitle.Visibility = Visibility.Collapsed;
+                control.VoteValue.Visibility = Visibility.Collapsed;
             }
             else
-                control.animeImg.Visibility = Visibility.Collapsed;
+            {
+                //control.animeImg.Visibility = Visibility.Collapsed;
+                control.PanelVote.Visibility = Visibility.Collapsed;
+                control.VoteTitle.Visibility = Visibility.Visible;
+                control.VoteValue.Visibility = Visibility.Visible;
+            }
 
             control.Title.Content = animes.Name;
             control.Title.NavigateUri = new Uri(animes.NameHyperlink);

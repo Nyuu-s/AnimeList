@@ -25,7 +25,7 @@ namespace AnimeList.Views
             if (e.Parameter != null)
             {
                 Debug.WriteLine(ViewModel.AnimesItems.Count);
-                ViewModel.Selected = ViewModel.AnimesItems[(int)e.Parameter];
+                //ViewModel.Selected = ViewModel.AnimesItems[Int16.Parse(e.Parameter.ToString())];
             }
                
             
